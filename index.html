@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- EDIT: page title and description shown in search results / browser tab -->
+  <title>Vivian Wanjiku | Full-Stack Developer</title>
+  <meta name="description" content="Vivian Wanjiku, full-stack developer building web apps with React, Python, Flask and SQL." />
+
+  <!-- Optional web fonts. The page falls back to system fonts if these don't load. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231f1d36'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='30' fill='%23f4a261'%3EVW%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__logo" aria-label="Vivian Wanjiku, back to top">
+        <span class="nav__mark">VW</span>
+        <span class="nav__name">Vivian Wanjiku</span>
+      </a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav-links" class="nav__links" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="https://github.com/vivianwanjiku-lab" target="_blank" rel="noopener" class="nav__gh" aria-label="GitHub profile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 00-1.3-3.2 4.2 4.2 0 00-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 00-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 00-.1 3.2A4.6 4.6 0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg><span>GitHub</span></a>
+        <a href="#contact" class="nav__cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <span class="blob blob--1"></span>
+        <span class="blob blob--2"></span>
+        <span class="blob blob--3"></span>
+      </div>
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <!-- EDIT: availability note (or delete this line) -->
+          <p class="eyebrow"><span class="dot"></span> Full-stack developer</p>
+          <h1 class="hero__title">Vivian Wanjiku</h1>
+          <!-- EDIT: one-line intro -->
+          <p class="hero__intro">I build web applications end to end: React interfaces on the front, Python &amp; Flask REST APIs and SQL databases behind them.</p>
+          <div class="hero__actions">
+            <a href="#work" class="btn btn--primary">View my work
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+            </a>
+            <a href="#contact" class="btn btn--ghost">Get in touch</a>
+          </div>
+        </div>
+
+        <!-- Decorative "code editor" card summarising the stack (edit freely) -->
+        <div class="hero__card" aria-hidden="true">
+          <div class="editor">
+            <div class="editor__bar"><span></span><span></span><span></span><em>developer.js</em></div>
+<pre class="editor__code"><code><span class="k">const</span> <span class="v">developer</span> = {
+  <span class="p">name</span>: <span class="s">"Vivian Wanjiku"</span>,
+  <span class="p">role</span>: <span class="s">"Full-stack developer"</span>,
+  <span class="p">frontend</span>: [<span class="s">"React"</span>, <span class="s">"JavaScript"</span>, <span class="s">"CSS"</span>],
+  <span class="p">backend</span>: [<span class="s">"Python"</span>, <span class="s">"Flask"</span>, <span class="s">"SQL"</span>],
+  <span class="p">testing</span>: <span class="s">"pytest"</span>,
+  <span class="p">learning</span>: [<span class="s">"Docker"</span>, <span class="s">"CI/CD"</span>],
+};</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container about">
+        <div class="about__text">
+          <p class="section__kicker">About</p>
+          <h2 class="section__title">About me</h2>
+          <!-- EDIT: your bio. Kept factual, based on the projects on GitHub. -->
+          <p>I'm a full-stack developer who enjoys taking an idea all the way to a working app. On the front end I use React and JavaScript to build responsive interfaces. On the back end I write REST APIs in Python with Flask and SQLAlchemy, backed by SQL databases.</p>
+          <p>My recent work includes team projects such as Recipe Swap Hub and TapNet, plus smaller APIs and command-line tools with automated tests in pytest. Right now I'm going deeper on REST API design, testing, Docker and CI/CD.</p>
+        </div>
+        <!-- EDIT: quick facts (or delete this list) -->
+        <ul class="facts">
+          <li><strong>Focus</strong><span>Full-stack web apps</span></li>
+          <li><strong>Core stack</strong><span>React · Flask · SQL</span></li>
+          <li><strong>Also</strong><span>REST APIs, CLIs, testing</span></li>
+          <li><strong>Learning</strong><span>Docker &amp; CI/CD</span></li>
+          <!-- EDIT: add your location if you'd like, e.g. <li><strong>Based in</strong><span>Your city</span></li> -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="section section--tint" id="work">
+      <div class="container">
+        <div class="section__head section__head--row">
+          <div>
+            <p class="section__kicker">Selected work</p>
+            <h2 class="section__title">Projects</h2>
+            <p class="section__lead">Six projects from my GitHub, spanning full-stack apps, REST APIs and command-line tools.</p>
+          </div>
+          <a class="link-arrow" href="https://github.com/vivianwanjiku-lab?tab=repositories" target="_blank" rel="noopener">All repositories →</a>
+        </div>
+
+        <!-- EDIT: each <article> is one project card (thumbnail, title, description, tags, links). -->
+        <div class="grid">
+          <article class="card">
+            <div class="card__thumb thumb--1" aria-hidden="true">
+              <span class="card__kind">Full-stack</span>
+              <span class="card__num">01</span>
+              <svg class="card__icon" viewBox="0 0 24 24"><path d="M5 12.5a10 10 0 0114 0M8.5 16a5 5 0 017 0M2 9a15 15 0 0120 0"/><circle cx="12" cy="19.5" r="1.2" fill="currentColor"/></svg>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">TapNet Network</h3>
+              <p class="card__desc">Internet service provider platform where customers browse plans, subscribe, pay and manage their accounts, while admins manage customers, packages, subscriptions and network services through a separate dashboard.</p>
+              <ul class="tags"><li>React</li><li>Redux Toolkit</li><li>Tailwind CSS</li><li>Recharts</li><li>Flask</li><li>JWT</li><li>PostgreSQL</li></ul>
+              <div class="card__links">
+                <a class="card__btn" href="https://github.com/vivianwanjiku-lab/Tapnet_Network" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 00-1.3-3.2 4.2 4.2 0 00-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 00-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 00-.1 3.2A4.6 4.6 0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> Code</a>
+                <a class="card__btn card__btn--primary" href="https://tapnet-network-udrn.vercel.app" target="_blank" rel="noopener">Live demo <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__thumb thumb--2" aria-hidden="true">
+              <span class="card__kind">Team project</span>
+              <span class="card__num">02</span>
+              <svg class="card__icon" viewBox="0 0 24 24"><path d="M7 21h10M8 17h8v4H8zM6 13.5A4 4 0 017.5 6 4.5 4.5 0 0116.5 6 4 4 0 0118 13.5V17H6z"/></svg>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Recipe Swap Hub</h3>
+              <p class="card__desc">Recipe-sharing app to post, browse, save and review recipes, with pantry matching and serving-size scaling. I was one of four developers: I built the frontend account pages (recipe detail and form, favorites, profile, settings, protected routes) and owned the frontend deployment.</p>
+              <ul class="tags"><li>React</li><li>Vite</li><li>React Router</li><li>Flask</li><li>JWT</li><li>SQL</li></ul>
+              <div class="card__links">
+                <a class="card__btn" href="https://github.com/vivianwanjiku-lab/Recipe-Swap-Hub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 00-1.3-3.2 4.2 4.2 0 00-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 00-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 00-.1 3.2A4.6 4.6 0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> Code</a>
+                <a class="card__btn card__btn--primary" href="https://recipe-swap-hub-4dwb.vercel.app/" target="_blank" rel="noopener">Live demo <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__thumb thumb--3" aria-hidden="true">
+              <span class="card__kind">Backend · CLI</span>
+              <span class="card__num">03</span>
+              <svg class="card__icon" viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5 9 5 9-5zM3 8v8l9 5 9-5V8M12 13v8"/></svg>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Inventory Management System</h3>
+              <p class="card__desc">Admin tool for e-commerce inventory: a Flask REST API with full CRUD and search, a Click command-line interface, and product lookups from the OpenFoodFacts API, covered by 40+ pytest unit tests.</p>
+              <ul class="tags"><li>Python</li><li>Flask</li><li>Click</li><li>REST API</li><li>OpenFoodFacts API</li><li>pytest</li></ul>
+              <div class="card__links">
+                <a class="card__btn" href="https://github.com/vivianwanjiku-lab/INVENTORY_MANAGEMENT" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 00-1.3-3.2 4.2 4.2 0 00-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 00-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 00-.1 3.2A4.6 4.6 0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__thumb thumb--4" aria-hidden="true">
+              <span class="card__kind">Backend</span>
+              <span class="card__num">04</span>
+              <svg class="card__icon" viewBox="0 0 24 24"><path d="M6.5 6.5v11M3.5 9v6M17.5 6.5v11M20.5 9v6M6.5 12h11"/></svg>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Workout Tracker API</h3>
+              <p class="card__desc">REST API for personal trainers to manage workouts and exercises, with a many-to-many relationship tracking sets, reps and duration, plus validation at the database, model and schema levels.</p>
+              <ul class="tags"><li>Python</li><li>Flask</li><li>SQLAlchemy</li><li>Marshmallow</li><li>Flask-Migrate</li><li>SQLite</li></ul>
+              <div class="card__links">
+                <a class="card__btn" href="https://github.com/vivianwanjiku-lab/Workout-API" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 00-1.3-3.2 4.2 4.2 0 00-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 00-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 00-.1 3.2A4.6 4.6 0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__thumb thumb--5" aria-hidden="true">
+              <span class="card__kind">Frontend</span>
+              <span class="card__num">05</span>
+              <svg class="card__icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M8 14h3v3H8z"/></svg>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Appointment Scheduler</h3>
+              <p class="card__desc">Responsive healthcare booking page where patients pick a doctor, date and time slot. It includes form validation, saves bookings in localStorage and prevents double-booking.</p>
+              <ul class="tags"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>localStorage</li></ul>
+              <div class="card__links">
+                <a class="card__btn" href="https://github.com/vivianwanjiku-lab/Final-project" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 00-1.3-3.2 4.2 4.2 0 00-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 00-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 00-.1 3.2A4.6 4.6 0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> Code</a>
+                <a class="card__btn card__btn--primary" href="https://vivianwanjiku-lab.github.io/Final-project/" target="_blank" rel="noopener">Live demo <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__thumb thumb--6" aria-hidden="true">
+              <span class="card__kind">Python CLI</span>
+              <span class="card__num">06</span>
+              <svg class="card__icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3M13 15h4"/></svg>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Master CLI Quiz Game</h3>
+              <p class="card__desc">Terminal trivia game that pulls live questions from the Open Trivia Database, with difficulty levels, user profiles, custom questions and saved high scores, tested with pytest.</p>
+              <ul class="tags"><li>Python</li><li>argparse</li><li>OpenTDB API</li><li>JSON storage</li><li>pytest</li></ul>
+              <div class="card__links">
+                <a class="card__btn" href="https://github.com/vivianwanjiku-lab/Master_CLI" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 00-1.3-3.2 4.2 4.2 0 00-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 00-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 00-.1 3.2A4.6 4.6 0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> Code</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__kicker">Skills</p>
+          <h2 class="section__title">Tools I work with</h2>
+          <p class="section__lead">Everything here is used in the projects above.</p>
+        </div>
+
+        <!-- EDIT: each .service is one skill area -->
+        <div class="services">
+          <div class="service">
+            <div class="service__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+            </div>
+            <h3>Frontend</h3>
+            <p>Responsive, component-based interfaces connected to real APIs.</p>
+            <ul class="chips"><li>React</li><li>JavaScript</li><li>HTML &amp; CSS</li><li>Redux Toolkit</li><li>React Router</li><li>Tailwind CSS</li><li>Vite</li></ul>
+          </div>
+          <div class="service">
+            <div class="service__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
+            </div>
+            <h3>Backend &amp; APIs</h3>
+            <p>RESTful services with authentication, validation and clear error handling.</p>
+            <ul class="chips"><li>Python</li><li>Flask</li><li>SQLAlchemy</li><li>Marshmallow</li><li>JWT auth</li><li>REST</li></ul>
+          </div>
+          <div class="service">
+            <div class="service__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="7.5" ry="2.5"/><path d="M4.5 5.5v13c0 1.4 3.4 2.5 7.5 2.5s7.5-1.1 7.5-2.5v-13M4.5 12c0 1.4 3.4 2.5 7.5 2.5s7.5-1.1 7.5-2.5"/></svg>
+            </div>
+            <h3>Databases</h3>
+            <p>Relational data models, relationships and migrations.</p>
+            <ul class="chips"><li>SQL</li><li>PostgreSQL</li><li>SQLite</li><li>Flask-Migrate</li><li>Alembic</li></ul>
+          </div>
+          <div class="service">
+            <div class="service__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/></svg>
+            </div>
+            <h3>Testing &amp; tooling</h3>
+            <p>Unit tests, version control and getting projects deployed.</p>
+            <ul class="chips"><li>pytest</li><li>Git &amp; GitHub</li><li>Postman</li><li>Vercel</li><li>GitHub Pages</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact">
+          <div class="contact__text">
+            <p class="section__kicker">Contact</p>
+            <h2 class="section__title">Let's build something</h2>
+            <!-- EDIT: a short invitation to get in touch -->
+            <p>Have a project, role or collaboration in mind? Send me an email, or browse more of my code on GitHub.</p>
+          </div>
+          <div class="contact__actions">
+            <!-- REPLACE: hello@example.com is a PLACEHOLDER. Put your real email in both the href and the visible text. -->
+            <a class="contact__email" href="mailto:hello@example.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+              hello@example.com
+            </a>
+            <ul class="socials" aria-label="Profiles">
+              <li><a href="https://github.com/vivianwanjiku-lab" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 00-1.3-3.2 4.2 4.2 0 00-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 00-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 00-.1 3.2A4.6 4.6 0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>github.com/vivianwanjiku-lab</a></li>
+              <!-- REPLACE: add more profiles if you have them, e.g.
+              <li><a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a></li>
+              -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; <span id="year">2026</span> Vivian Wanjiku</p>
+      <a href="#top" class="footer__top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.querySelector('.nav');
+
+    // Mobile menu toggle
+    const toggle = document.querySelector('.nav__toggle');
+    const links = document.querySelector('.nav__links');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('is-open');
+      nav.classList.toggle('menu-open', open);
+      toggle.setAttribute('aria-expanded', open);
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      links.classList.remove('is-open');
+      nav.classList.remove('menu-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }));
+
+    // Nav background once you scroll
+    const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 8);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
