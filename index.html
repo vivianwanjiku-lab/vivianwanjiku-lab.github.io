@@ -265,25 +265,86 @@
     <section class="section" id="contact">
       <div class="container">
         <div class="contact">
-          <div class="contact__text">
-            <p class="section__kicker">Contact</p>
-            <h2 class="section__title">Let's build something</h2>
-            <!-- EDIT: a short invitation to get in touch -->
-            <p>Have a project, role or collaboration in mind? Send me an email, or browse more of my code on GitHub.</p>
-          </div>
-          <div class="contact__actions">
-            <!-- Contact email -->
-            <a class="contact__email" href="mailto:vividorpass@gmail.com">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-              vividorpass@gmail.com
-            </a>
-            <ul class="socials" aria-label="Profiles">
-              <li><a href="https://github.com/vivianwanjiku-lab" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 00-1.3-3.2 4.2 4.2 0 00-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 00-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 00-.1 3.2A4.6 4.6 0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>github.com/vivianwanjiku-lab</a></li>
-              <!-- REPLACE: add more profiles if you have them, e.g.
-              <li><a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a></li>
-              -->
+          <div class="contact__info">
+            <div class="contact__text">
+              <p class="section__kicker">Contact</p>
+              <h2 class="section__title">Let's build something</h2>
+              <!-- EDIT: a short invitation to get in touch -->
+              <p>Have a project, role or collaboration in mind? Send me a message or a suggestion using the form, or reach me directly by email or phone.</p>
+            </div>
+
+            <!-- Contact details: email, phone, GitHub -->
+            <ul class="contact__list">
+              <li>
+                <a class="contact__item" href="mailto:vividorpass@gmail.com">
+                  <span class="contact__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+                  <span><small>Email</small>vividorpass@gmail.com</span>
+                </a>
+              </li>
+              <li>
+                <a class="contact__item" href="tel:+254740758072">
+                  <span class="contact__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg></span>
+                  <span><small>Phone</small>0740 758 072</span>
+                </a>
+              </li>
+              <li>
+                <a class="contact__item" href="https://github.com/vivianwanjiku-lab" target="_blank" rel="noopener">
+                  <span class="contact__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 00-1.3-3.2 4.2 4.2 0 00-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 00-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 00-.1 3.2A4.6 4.6 0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></span>
+                  <span><small>GitHub</small>github.com/vivianwanjiku-lab</span>
+                </a>
+              </li>
+              <!-- REPLACE: add more profiles if you have them (copy one <li> above), e.g. LinkedIn -->
             </ul>
           </div>
+
+          <!-- Message / suggestion form.
+               Static site: submissions are sent with FormSubmit (https://formsubmit.co) to the email in the
+               data-endpoint URL below. To change the destination, edit that URL. -->
+          <form class="cform" id="contact-form" data-endpoint="https://formsubmit.co/ajax/vividorpass@gmail.com" novalidate>
+            <h3 class="cform__title">Send a message</h3>
+            <div class="cform__row">
+              <div class="field">
+                <label for="cf-name">Name</label>
+                <input id="cf-name" name="name" type="text" autocomplete="name" required maxlength="100" placeholder="Your name" aria-describedby="cf-name-err" />
+                <p class="field__error" id="cf-name-err"></p>
+              </div>
+              <div class="field">
+                <label for="cf-email">Email</label>
+                <input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="150" placeholder="you@example.com" aria-describedby="cf-email-err" />
+                <p class="field__error" id="cf-email-err"></p>
+              </div>
+            </div>
+
+            <fieldset class="field segmented">
+              <legend>Type</legend>
+              <div class="segmented__opts">
+                <input type="radio" id="cf-type-msg" name="type" value="Message" checked />
+                <label for="cf-type-msg">Message</label>
+                <input type="radio" id="cf-type-sug" name="type" value="Suggestion" />
+                <label for="cf-type-sug">Suggestion</label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" required maxlength="5000" placeholder="What would you like to say?" aria-describedby="cf-message-err"></textarea>
+              <p class="field__error" id="cf-message-err"></p>
+            </div>
+
+            <!-- Honeypot: hidden from people; bots that fill it are ignored -->
+            <div class="cform__honey" aria-hidden="true">
+              <label for="cf-honey">Leave this field empty</label>
+              <input id="cf-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="cform__footer">
+              <button type="submit" class="cform__submit">
+                <span class="cform__label">Send</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l16-8-6 16-2.5-6.5z"/><path d="M11.5 13.5L20 4"/></svg>
+              </button>
+              <p class="cform__status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
         </div>
       </div>
     </section>
@@ -322,6 +383,72 @@
 
     // Current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
+    // Contact form → FormSubmit (AJAX). Submissions arrive by email.
+    const form = document.getElementById('contact-form');
+    if (form) {
+      const status = form.querySelector('.cform__status');
+      const button = form.querySelector('.cform__submit');
+      const label = form.querySelector('.cform__label');
+      const fields = ['name', 'email', 'message'].map(n => form.elements[n]);
+      const messages = {
+        name: 'Please enter your name.',
+        email: 'Please enter a valid email address.',
+        message: 'Please write a message.'
+      };
+      const setStatus = (text, type) => { status.textContent = text; status.className = 'cform__status' + (type ? ' is-' + type : ''); };
+      const validate = (el) => {
+        const err = document.getElementById(el.id + '-err');
+        el.value = el.name === 'message' ? el.value : el.value.trim();
+        const ok = el.value.trim() !== '' && el.checkValidity();
+        el.setAttribute('aria-invalid', ok ? 'false' : 'true');
+        err.textContent = ok ? '' : messages[el.name];
+        return ok;
+      };
+      fields.forEach(el => {
+        el.addEventListener('blur', () => { if (el.value) validate(el); });
+        el.addEventListener('input', () => { if (el.getAttribute('aria-invalid') === 'true') validate(el); });
+      });
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const invalid = fields.filter(el => !validate(el));
+        if (invalid.length) { invalid[0].focus(); setStatus('Please fix the highlighted fields.', 'error'); return; }
+
+        const type = form.elements.type.value || 'Message';
+        // Bots that fill the honeypot get a fake success and nothing is sent.
+        if (form.elements._honey.value) { form.reset(); setStatus('Thanks! Your message has been sent.', 'success'); return; }
+
+        button.disabled = true; label.textContent = 'Sending…'; setStatus('', '');
+        try {
+          const res = await fetch(form.dataset.endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({
+              name: form.elements.name.value.trim(),
+              email: form.elements.email.value.trim(),
+              type,
+              message: form.elements.message.value.trim(),
+              _subject: 'New portfolio ' + type.toLowerCase(),
+              _template: 'table',
+              _replyto: form.elements.email.value.trim(),
+              _honey: ''
+            })
+          });
+          const data = await res.json().catch(() => ({}));
+          if (res.ok && String(data.success) === 'true') {
+            form.reset();
+            fields.forEach(el => el.removeAttribute('aria-invalid'));
+            setStatus('Thanks! Your message has been sent.', 'success');
+          } else {
+            throw new Error(data.message || 'Request failed');
+          }
+        } catch (err) {
+          setStatus('Sorry, something went wrong and your message wasn\'t sent. Please try again or email me directly.', 'error');
+        } finally {
+          button.disabled = false; label.textContent = 'Send';
+        }
+      });
+    }
   </script>
 </body>
 </html>
